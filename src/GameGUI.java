@@ -36,7 +36,7 @@ public class GameGUI extends JFrame {
 
 
 
-        // Set black background
+
 
         getContentPane().setBackground(Color.BLACK);
 
@@ -50,9 +50,7 @@ public class GameGUI extends JFrame {
 
 
 
-        // Game text area with black background
-
-        gameText = new JTextArea(20, 60);
+ = new JTextArea(20, 60);
 
         gameText.setEditable(false);
 
@@ -80,7 +78,6 @@ public class GameGUI extends JFrame {
 
 
 
-        // Choice buttons
 
         JPanel buttonPanel = new JPanel(new FlowLayout());
 
@@ -98,7 +95,7 @@ public class GameGUI extends JFrame {
 
 
 
-        // Style buttons for black background
+
 
         styleButton(choice1);
 
@@ -494,13 +491,12 @@ public class GameGUI extends JFrame {
 
 
 
-        // Disable buttons during battle
+
 
         setButtonsEnabled(false);
 
 
 
-        // Start battle in a separate thread to keep GUI responsive
 
         new Thread(() -> {
 
