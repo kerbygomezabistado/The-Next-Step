@@ -13,6 +13,10 @@ public class Team {
         members.add(new Tess());
     }
 
+    public List<Character> getMembers(){
+        return members;
+    }
+
     public void showStatus() {
         System.out.println("\nTeam Status:");
         for (Character c : members) {
