@@ -34,10 +34,6 @@ public class GameGUI extends JFrame {
 
         setSize(800, 600);
 
-
-
-
-
         getContentPane().setBackground(Color.BLACK);
 
 
@@ -50,7 +46,7 @@ public class GameGUI extends JFrame {
 
 
 
- = new JTextArea(20, 60);
+        gameText = new JTextArea(20, 60);
 
         gameText.setEditable(false);
 
@@ -78,7 +74,6 @@ public class GameGUI extends JFrame {
 
 
 
-
         JPanel buttonPanel = new JPanel(new FlowLayout());
 
         buttonPanel.setBackground(Color.BLACK);
@@ -92,8 +87,6 @@ public class GameGUI extends JFrame {
         choice2 = new JButton("");
 
         choice3 = new JButton("Exit");
-
-
 
 
 
@@ -219,8 +212,6 @@ public class GameGUI extends JFrame {
 
 
 
-        // Handle game over restart
-
         if (currentStage == -1 && choice == 1) {
 
             restartGame();
@@ -243,35 +234,15 @@ public class GameGUI extends JFrame {
 
         switch (stage) {
 
-            case 1:
+            case 1: showStage1(); break;
 
-                showStage1();
+            case 2: showStage2(); break;
 
-                break;
+            case 3: showStage3(); break;
 
-            case 2:
+            case 4: showStage4(); break;
 
-                showStage2();
-
-                break;
-
-            case 3:
-
-                showStage3();
-
-                break;
-
-            case 4:
-
-                showStage4();
-
-                break;
-
-            case 5:
-
-                showStage5();
-
-                break;
+            case 5: showStage5(); break;
 
         }
 
@@ -491,10 +462,7 @@ public class GameGUI extends JFrame {
 
 
 
-
-
         setButtonsEnabled(false);
-
 
 
 

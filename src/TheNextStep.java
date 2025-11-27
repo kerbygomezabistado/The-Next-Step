@@ -1,6 +1,6 @@
 import java.util.*;
 
-public class NextStep {
+public class TheNextStep {
     static Scanner in = new Scanner(System.in);
     static Random rand = new Random();
 
